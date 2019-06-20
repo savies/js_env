@@ -12,6 +12,7 @@ webpack(webpackConfig).run((err, stats) => {
     console.log(chalk.red(err));
     return 1;
   }
+
   const jsonStats = stats.toJson();
 
   if (jsonStats.hasErrors) {
@@ -19,7 +20,7 @@ webpack(webpackConfig).run((err, stats) => {
   }
 
   if (jsonStats.hasWarnings) {
-    console.log(chalk.yellow('Webpack generated the following warnings : '));
+    console.log(chalk.yellow('Webpack generated the following warnings: '));
     jsonStats.warnings.map(warning => console.log(chalk.yellow(warning)));
   }
 
@@ -27,5 +28,6 @@ webpack(webpackConfig).run((err, stats) => {
 
   // if we got this far, the build succeeded.
   console.log(chalk.green('Your app has been built for production and written to /dist!'));
+
   return 0;
 });

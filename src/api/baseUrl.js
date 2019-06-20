@@ -1,5 +1,5 @@
 export default function getBaseUrl() {
-  return getQueryStringParameterByName('useMockapi') ? 'http://localhost:3001/' : 'https://nameless-reef-24222.herokuapp.com/';
+  return getQueryStringParameterByName('useMockApi') ? 'http://localhost:3001/' : 'https://nameless-reef-24222.herokuapp.com/';
 }
 
 function getQueryStringParameterByName(name) {
